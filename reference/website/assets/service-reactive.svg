@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Phone/call centre -->
+  <rect x="40" y="80" width="80" height="140" rx="8" fill="#f4f5f7" stroke="#c8c8d0" stroke-width="1.5"/>
+  <rect x="50" y="95" width="60" height="90" rx="4" fill="#ffffff"/>
+  <circle cx="80" cy="120" r="12" fill="#e87c3e" opacity="0.2"/>
+  <path d="M74 118 C74 115, 77 113, 80 113 C83 113, 86 115, 86 118 L86 120 C86 121, 85 122, 84 122 L82 122 L82 120 C82 118, 80 116, 80 116 C80 116, 78 118, 78 120 L78 122 L76 122 C75 122, 74 121, 74 120 Z" fill="#e87c3e" opacity="0.6"/>
+  <!-- Alert/urgency indicator -->
+  <circle cx="105" cy="90" r="10" fill="#e87c3e" opacity="0.8"/>
+  <text x="105" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="white">!</text>
+  <!-- Arrow flow -->
+  <path d="M130 150 L170 150" stroke="#3a8fb7" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="170,145 180,150 170,155" fill="#3a8fb7"/>
+  <!-- Dispatch/routing -->
+  <rect x="190" y="110" width="100" height="80" rx="6" fill="#1a3a5c" opacity="0.1"/>
+  <circle cx="220" cy="140" r="6" fill="#3a8fb7"/>
+  <circle cx="250" cy="130" r="6" fill="#3a8fb7" opacity="0.6"/>
+  <circle cx="260" cy="155" r="6" fill="#3a8fb7" opacity="0.6"/>
+  <line x1="220" y1="140" x2="250" y2="130" stroke="#3a8fb7" stroke-width="1" opacity="0.5"/>
+  <line x1="220" y1="140" x2="260" y2="155" stroke="#3a8fb7" stroke-width="1" opacity="0.5"/>
+  <!-- Arrow to engineer -->
+  <path d="M300 150 L330 150" stroke="#3a8fb7" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="330,145 340,150 330,155" fill="#3a8fb7"/>
+  <!-- Van -->
+  <rect x="340" y="125" width="50" height="30" rx="4" fill="#1a3a5c" opacity="0.7"/>
+  <rect x="330" y="135" width="15" height="20" rx="3" fill="#1a3a5c" opacity="0.5"/>
+  <rect x="345" y="130" width="15" height="10" rx="2" fill="#3a8fb7" opacity="0.3"/>
+  <circle cx="345" cy="160" r="6" fill="#4a4a5a"/>
+  <circle cx="375" cy="160" r="6" fill="#4a4a5a"/>
+  <!-- Frostline logo on van -->
+  <circle cx="365" cy="140" r="5" fill="none" stroke="#3a8fb7" stroke-width="1"/>
+  <path d="M365 135 L365 137" stroke="#3a8fb7" stroke-width="0.8" stroke-linecap="round"/>
+  <!-- Clock/response time -->
+  <circle cx="80" cy="250" r="25" fill="none" stroke="#1a3a5c" stroke-width="2" opacity="0.4"/>
+  <path d="M80 230 L80 250 L92 244" stroke="#1a3a5c" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <text x="80" y="285" text-anchor="middle" font-size="10" fill="#7a7a8a">Response</text>
+  <!-- Diagnosis -->
+  <rect x="200" y="210" width="80" height="60" rx="4" fill="#ffffff" stroke="#c8c8d0" stroke-width="1"/>
+  <path d="M220 230 L225 240 L235 225 L240 235 L250 230 L255 238 L260 228" stroke="#3a8fb7" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <text x="240" y="258" text-anchor="middle" font-size="9" fill="#7a7a8a">Diagnosis</text>
+</svg>

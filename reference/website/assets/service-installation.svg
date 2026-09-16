@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Building outline -->
+  <rect x="60" y="60" width="180" height="200" rx="4" fill="none" stroke="#c8c8d0" stroke-width="1.5"/>
+  <!-- Roof -->
+  <line x1="50" y1="60" x2="250" y2="60" stroke="#1a3a5c" stroke-width="2"/>
+  <!-- New unit being placed (lifted) -->
+  <rect x="80" y="30" width="70" height="40" rx="4" fill="#3a8fb7" opacity="0.3" stroke="#3a8fb7" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <!-- Lift lines -->
+  <line x1="95" y1="20" x2="95" y2="30" stroke="#e87c3e" stroke-width="1.5"/>
+  <line x1="135" y1="20" x2="135" y2="30" stroke="#e87c3e" stroke-width="1.5"/>
+  <line x1="95" y1="20" x2="135" y2="20" stroke="#e87c3e" stroke-width="1.5"/>
+  <line x1="115" y1="10" x2="115" y2="20" stroke="#e87c3e" stroke-width="2"/>
+  <!-- Arrow down -->
+  <polygon points="110,45 115,55 120,45" fill="#3a8fb7" opacity="0.6"/>
+  <!-- Existing unit on roof -->
+  <rect x="170" y="40" width="50" height="25" rx="3" fill="#1a3a5c" opacity="0.4"/>
+  <circle cx="195" cy="52" r="8" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+  <!-- Interior ductwork -->
+  <rect x="80" y="90" width="140" height="10" rx="3" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="80" y="90" width="10" height="60" rx="3" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="210" y="90" width="10" height="60" rx="3" fill="#3a8fb7" opacity="0.15"/>
+  <!-- Diffusers -->
+  <rect x="100" y="98" width="20" height="4" rx="2" fill="#3a8fb7" opacity="0.3"/>
+  <rect x="150" y="98" width="20" height="4" rx="2" fill="#3a8fb7" opacity="0.3"/>
+  <!-- Pipework -->
+  <path d="M250 100 L280 100 L280 200 L250 200" stroke="#e87c3e" stroke-width="2" opacity="0.5"/>
+  <path d="M255 110 L275 110 L275 190 L255 190" stroke="#3a8fb7" stroke-width="2" opacity="0.4"/>
+  <!-- Engineers working -->
+  <circle cx="130" cy="175" r="8" fill="#e87c3e" opacity="0.6"/>
+  <rect x="125" y="185" width="10" height="22" rx="3" fill="#1a3a5c" opacity="0.5"/>
+  <circle cx="170" cy="175" r="8" fill="#e87c3e" opacity="0.6"/>
+  <rect x="165" y="185" width="10" height="22" rx="3" fill="#1a3a5c" opacity="0.5"/>
+  <!-- Tools -->
+  <rect x="145" y="195" width="15" height="3" rx="1" fill="#7a7a8a" opacity="0.5"/>
+  <!-- Project plan -->
+  <rect x="290" y="80" width="80" height="100" rx="4" fill="#ffffff" stroke="#c8c8d0" stroke-width="1"/>
+  <rect x="300" y="90" width="60" height="4" rx="1" fill="#1a3a5c" opacity="0.3"/>
+  <rect x="300" y="100" width="40" height="3" rx="1" fill="#c8c8d0"/>
+  <rect x="300" y="110" width="55" height="3" rx="1" fill="#c8c8d0"/>
+  <!-- Gantt-like bars -->
+  <rect x="300" y="125" width="30" height="6" rx="2" fill="#3a8fb7" opacity="0.5"/>
+  <rect x="310" y="135" width="40" height="6" rx="2" fill="#3a8fb7" opacity="0.4"/>
+  <rect x="305" y="145" width="35" height="6" rx="2" fill="#e87c3e" opacity="0.4"/>
+  <rect x="320" y="155" width="25" height="6" rx="2" fill="#3a8fb7" opacity="0.3"/>
+  <!-- Commissioning symbol -->
+  <circle cx="330" cy="220" r="20" fill="none" stroke="#4CAF50" stroke-width="2" opacity="0.5"/>
+  <path d="M320 220 L327 227 L340 214" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Equipment unit -->
+  <rect x="100" y="80" width="200" height="140" rx="6" fill="#f4f5f7" stroke="#c8c8d0" stroke-width="1.5"/>
+  <!-- Fan grille -->
+  <circle cx="200" cy="140" r="40" fill="none" stroke="#3a8fb7" stroke-width="2"/>
+  <circle cx="200" cy="140" r="28" fill="none" stroke="#3a8fb7" stroke-width="1" opacity="0.5"/>
+  <circle cx="200" cy="140" r="5" fill="#3a8fb7"/>
+  <!-- Fan blades -->
+  <path d="M200 112 C210 120, 210 130, 200 140 C190 130, 190 120, 200 112" fill="#3a8fb7" opacity="0.4"/>
+  <path d="M228 140 C220 150, 210 150, 200 140 C210 130, 220 130, 228 140" fill="#3a8fb7" opacity="0.4"/>
+  <path d="M200 168 C190 160, 190 150, 200 140 C210 150, 210 160, 200 168" fill="#3a8fb7" opacity="0.4"/>
+  <path d="M172 140 C180 130, 190 130, 200 140 C190 150, 180 150, 172 140" fill="#3a8fb7" opacity="0.4"/>
+  <!-- Control panel -->
+  <rect x="120" y="185" width="60" height="25" rx="3" fill="#1a3a5c" opacity="0.2"/>
+  <circle cx="135" cy="197" r="4" fill="#4CAF50"/>
+  <rect x="145" y="193" width="25" height="3" rx="1" fill="#3a8fb7" opacity="0.5"/>
+  <rect x="145" y="199" width="20" height="3" rx="1" fill="#3a8fb7" opacity="0.3"/>
+  <!-- Wrench -->
+  <path d="M290 100 L310 120" stroke="#e87c3e" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="290" cy="100" r="8" fill="none" stroke="#e87c3e" stroke-width="2"/>
+  <!-- Checklist -->
+  <rect x="300" y="150" width="60" height="80" rx="4" fill="#ffffff" stroke="#c8c8d0" stroke-width="1"/>
+  <rect x="308" y="160" width="8" height="8" rx="1" fill="none" stroke="#4CAF50" stroke-width="1.5"/>
+  <path d="M310 164 L312 166 L316 162" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="320" y="162" width="30" height="3" rx="1" fill="#c8c8d0"/>
+  <rect x="308" y="175" width="8" height="8" rx="1" fill="none" stroke="#4CAF50" stroke-width="1.5"/>
+  <path d="M310 179 L312 181 L316 177" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="320" y="177" width="30" height="3" rx="1" fill="#c8c8d0"/>
+  <rect x="308" y="190" width="8" height="8" rx="1" fill="none" stroke="#3a8fb7" stroke-width="1.5"/>
+  <rect x="320" y="192" width="30" height="3" rx="1" fill="#c8c8d0"/>
+  <rect x="308" y="205" width="8" height="8" rx="1" fill="none" stroke="#3a8fb7" stroke-width="1.5"/>
+  <rect x="320" y="207" width="30" height="3" rx="1" fill="#c8c8d0"/>
+  <!-- Temperature reading -->
+  <rect x="40" y="120" width="30" height="60" rx="4" fill="#ffffff" stroke="#c8c8d0" stroke-width="1"/>
+  <rect x="50" y="155" width="10" height="20" rx="5" fill="#e87c3e" opacity="0.6"/>
+  <rect x="53" y="130" width="4" height="30" rx="2" fill="#e87c3e" opacity="0.4"/>
+  <circle cx="55" cy="165" r="7" fill="#e87c3e" opacity="0.6"/>
+</svg>

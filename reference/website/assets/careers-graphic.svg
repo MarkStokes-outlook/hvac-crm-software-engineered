@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Career path upward -->
+  <path d="M60 260 C100 240, 140 200, 180 180 C220 160, 260 130, 320 90" stroke="#3a8fb7" stroke-width="2.5" fill="none" opacity="0.3"/>
+  <!-- Milestone dots -->
+  <circle cx="80" cy="248" r="8" fill="#3a8fb7" opacity="0.3"/>
+  <circle cx="140" cy="210" r="8" fill="#3a8fb7" opacity="0.4"/>
+  <circle cx="200" cy="172" r="8" fill="#3a8fb7" opacity="0.5"/>
+  <circle cx="260" cy="135" r="8" fill="#3a8fb7" opacity="0.6"/>
+  <circle cx="320" cy="90" r="10" fill="#3a8fb7" opacity="0.8"/>
+  <!-- Labels -->
+  <text x="80" y="270" text-anchor="middle" font-size="8" fill="#7a7a8a">Apprentice</text>
+  <text x="140" y="230" text-anchor="middle" font-size="8" fill="#7a7a8a">Improver</text>
+  <text x="200" y="192" text-anchor="middle" font-size="8" fill="#7a7a8a">Engineer</text>
+  <text x="260" y="155" text-anchor="middle" font-size="8" fill="#7a7a8a">Senior</text>
+  <text x="320" y="112" text-anchor="middle" font-size="8" fill="#7a7a8a">Lead</text>
+  <!-- Training symbols -->
+  <rect x="290" y="180" width="70" height="50" rx="4" fill="#f4f5f7" stroke="#c8c8d0" stroke-width="1"/>
+  <rect x="300" y="190" width="50" height="4" rx="1" fill="#1a3a5c" opacity="0.3"/>
+  <rect x="300" y="199" width="35" height="3" rx="1" fill="#c8c8d0"/>
+  <rect x="300" y="207" width="45" height="3" rx="1" fill="#c8c8d0"/>
+  <rect x="300" y="215" width="25" height="3" rx="1" fill="#c8c8d0"/>
+  <!-- Certificate -->
+  <rect x="50" y="100" width="60" height="45" rx="3" fill="#ffffff" stroke="#e87c3e" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="80" cy="117" r="8" fill="none" stroke="#e87c3e" stroke-width="1" opacity="0.5"/>
+  <path d="M76 117 L79 120 L84 114" stroke="#e87c3e" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <rect x="60" y="130" width="40" height="3" rx="1" fill="#c8c8d0"/>
+  <rect x="65" y="137" width="30" height="2" rx="1" fill="#c8c8d0"/>
+  <!-- Wrench/tools -->
+  <path d="M170 100 L185 115" stroke="#1a3a5c" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <circle cx="170" cy="100" r="6" fill="none" stroke="#1a3a5c" stroke-width="2" opacity="0.4"/>
+  <path d="M190 95 L175 110" stroke="#e87c3e" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+</svg>

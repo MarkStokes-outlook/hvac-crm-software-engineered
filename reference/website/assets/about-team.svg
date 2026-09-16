@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Office/depot building -->
+  <rect x="50" y="120" width="160" height="120" rx="4" fill="#f4f5f7" stroke="#c8c8d0" stroke-width="1"/>
+  <rect x="60" y="130" width="30" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="100" y="130" width="30" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="140" y="130" width="30" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="60" y="165" width="30" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="100" y="165" width="30" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="140" y="165" width="30" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <!-- Door -->
+  <rect x="105" y="205" width="30" height="35" rx="2" fill="#1a3a5c" opacity="0.3"/>
+  <!-- Sign on building -->
+  <rect x="70" y="105" width="100" height="12" rx="2" fill="#1a3a5c" opacity="0.7"/>
+  <text x="120" y="114" text-anchor="middle" font-size="7" fill="white" font-weight="bold">FROSTLINE</text>
+  <!-- Team of people -->
+  <circle cx="250" cy="155" r="12" fill="#e87c3e" opacity="0.7"/>
+  <rect x="243" y="169" width="14" height="28" rx="4" fill="#1a3a5c" opacity="0.5"/>
+  <circle cx="280" cy="160" r="10" fill="#e87c3e" opacity="0.6"/>
+  <rect x="274" y="172" width="12" height="24" rx="4" fill="#1a3a5c" opacity="0.4"/>
+  <circle cx="310" cy="155" r="12" fill="#e87c3e" opacity="0.7"/>
+  <rect x="303" y="169" width="14" height="28" rx="4" fill="#1a3a5c" opacity="0.5"/>
+  <circle cx="340" cy="162" r="10" fill="#e87c3e" opacity="0.6"/>
+  <rect x="334" y="174" width="12" height="24" rx="4" fill="#1a3a5c" opacity="0.4"/>
+  <!-- Van -->
+  <rect x="240" y="225" width="70" height="35" rx="4" fill="#1a3a5c" opacity="0.6"/>
+  <rect x="225" y="235" width="20" height="25" rx="3" fill="#1a3a5c" opacity="0.45"/>
+  <rect x="228" y="237" width="14" height="12" rx="2" fill="#3a8fb7" opacity="0.3"/>
+  <circle cx="245" cy="264" r="7" fill="#4a4a5a"/>
+  <circle cx="295" cy="264" r="7" fill="#4a4a5a"/>
+  <!-- Frostline on van -->
+  <rect x="255" y="235" width="40" height="8" rx="2" fill="#3a8fb7" opacity="0.4"/>
+  <!-- Hard hat on person -->
+  <path d="M244 145 L256 145 L258 150 L242 150 Z" fill="#e87c3e" opacity="0.5"/>
+  <!-- Tools in hand -->
+  <rect x="260" y="180" width="20" height="3" rx="1" fill="#7a7a8a" opacity="0.5"/>
+  <!-- Years badge -->
+  <circle cx="350" cy="90" r="25" fill="#1a3a5c" stroke="#1a3a5c" stroke-width="1.5" opacity="0.3"/>
+  <text x="350" y="87" text-anchor="middle" font-size="10" fill="#1a3a5c" font-weight="bold">Est.</text>
+  <text x="350" y="100" text-anchor="middle" font-size="11" fill="#1a3a5c" font-weight="bold">2011</text>
+</svg>

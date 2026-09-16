@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Office building -->
+  <rect x="30" y="80" width="60" height="90" rx="3" fill="#1a3a5c" opacity="0.2"/>
+  <rect x="38" y="88" width="12" height="12" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="55" y="88" width="12" height="12" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="38" y="106" width="12" height="12" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="55" y="106" width="12" height="12" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="38" y="124" width="12" height="12" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="55" y="124" width="12" height="12" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <text x="60" y="185" text-anchor="middle" font-size="9" fill="#7a7a8a">Offices</text>
+  <!-- Retail -->
+  <rect x="110" y="120" width="60" height="50" rx="3" fill="#1a3a5c" opacity="0.2"/>
+  <rect x="115" y="140" width="50" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="130" y="150" width="20" height="20" rx="1" fill="#e87c3e" opacity="0.15"/>
+  <text x="140" y="185" text-anchor="middle" font-size="9" fill="#7a7a8a">Retail</text>
+  <!-- Hotel/hospitality -->
+  <rect x="190" y="90" width="60" height="80" rx="3" fill="#1a3a5c" opacity="0.2"/>
+  <rect x="210" y="80" width="20" height="12" rx="2" fill="#e87c3e" opacity="0.3"/>
+  <rect x="198" y="100" width="15" height="10" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="218" y="100" width="15" height="10" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="198" y="116" width="15" height="10" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="218" y="116" width="15" height="10" rx="1" fill="#3a8fb7" opacity="0.2"/>
+  <text x="220" y="185" text-anchor="middle" font-size="9" fill="#7a7a8a">Hospitality</text>
+  <!-- Education -->
+  <rect x="270" y="110" width="60" height="60" rx="3" fill="#1a3a5c" opacity="0.2"/>
+  <polygon points="300,95 270,110 330,110" fill="#1a3a5c" opacity="0.15"/>
+  <rect x="290" y="140" width="20" height="30" rx="2" fill="#e87c3e" opacity="0.2"/>
+  <text x="300" y="185" text-anchor="middle" font-size="9" fill="#7a7a8a">Education</text>
+  <!-- Industrial -->
+  <rect x="350" y="100" width="40" height="70" rx="2" fill="#1a3a5c" opacity="0.2"/>
+  <rect x="355" y="95" width="8" height="15" rx="1" fill="#7a7a8a" opacity="0.3"/>
+  <rect x="360" y="110" width="25" height="20" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <text x="370" y="185" text-anchor="middle" font-size="9" fill="#7a7a8a">Industrial</text>
+  <!-- Map suggestion (NW England) -->
+  <path d="M80 220 C100 215, 130 210, 160 215 C190 220, 220 230, 250 225 C280 220, 310 215, 340 220" stroke="#3a8fb7" stroke-width="1.5" fill="none" opacity="0.3" stroke-dasharray="3 2"/>
+  <!-- Location pins -->
+  <circle cx="120" cy="240" r="5" fill="#e87c3e" opacity="0.6"/>
+  <circle cx="180" cy="245" r="5" fill="#e87c3e" opacity="0.6"/>
+  <circle cx="240" cy="235" r="5" fill="#e87c3e" opacity="0.6"/>
+  <circle cx="300" cy="242" r="5" fill="#e87c3e" opacity="0.6"/>
+  <!-- Coverage text -->
+  <text x="200" y="275" text-anchor="middle" font-size="10" fill="#7a7a8a">North West England</text>
+</svg>

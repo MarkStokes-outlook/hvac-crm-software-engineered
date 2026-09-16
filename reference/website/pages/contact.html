@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Frostline Mechanical Services</title>
+  <meta name="description" content="Get in touch with Frostline Mechanical Services for maintenance quotations, reactive support, project enquiries or career opportunities.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.svg" alt="Frostline logo" class="logo-icon">
+        <span class="logo-text">Frost<span>line</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="sectors.html">Sectors</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Get in Touch</h1>
+      <p>Whether you need a quotation, want to report a fault or are interested in working with us — we would like to hear from you.</p>
+    </section>
+
+    <section class="section">
+      <div class="contact-grid">
+        <div class="contact-form">
+          <h3 style="margin-bottom:1.5rem;">Send us a message</h3>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="organisation">Organisation</label>
+              <input type="text" id="organisation" name="organisation" autocomplete="organization">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="enquiry-type">Enquiry type</label>
+              <select id="enquiry-type" name="enquiry-type">
+                <option value="">Please select</option>
+                <option value="maintenance">Maintenance quotation</option>
+                <option value="reactive">Report a fault</option>
+                <option value="installation">Installation or project enquiry</option>
+                <option value="general">General enquiry</option>
+                <option value="careers">Careers</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send Enquiry</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>Contact details</h3>
+          <p>Our service team is available during normal working hours, Monday to Friday. Contracted customers with out-of-hours emergencies should use their dedicated contact number.</p>
+
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 5C3 3.89543 3.89543 3 5 3H6.38197C6.76067 3 7.107 3.214 7.27639 3.55279L8.72361 6.44721C8.893 6.786 8.86 7.191 8.63397 7.49614L7.5 9C7.5 9 8 11 9.5 12.5C11 14 13 14.5 13 14.5L14.5036 13.366C14.809 13.14 15.214 13.107 15.5528 13.2764L18.4472 14.7236C18.786 14.893 19 15.2393 19 15.618V17C19 18.1046 18.1046 19 17 19H16C8.82 19 3 13.18 3 6V5Z" stroke="#3a8fb7" stroke-width="1.5"/>
+            </svg>
+            <div>
+              <strong>Telephone</strong>
+              <span style="color:var(--grey-500);font-style:italic;">[Telephone number]</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="16" height="12" rx="2" stroke="#3a8fb7" stroke-width="1.5"/>
+              <path d="M2 6L10 11L18 6" stroke="#3a8fb7" stroke-width="1.5"/>
+            </svg>
+            <div>
+              <strong>Email</strong>
+              <span style="color:var(--grey-500);font-style:italic;">[Email address]</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2C6.13 2 3 5.13 3 9C3 14 10 19 10 19C10 19 17 14 17 9C17 5.13 13.87 2 10 2Z" stroke="#3a8fb7" stroke-width="1.5"/>
+              <circle cx="10" cy="9" r="2.5" stroke="#3a8fb7" stroke-width="1.5"/>
+            </svg>
+            <div>
+              <strong>Address</strong>
+              <span style="color:var(--grey-500);font-style:italic;">[Office address]</span><br>
+              <span style="font-size:0.85rem;color:var(--grey-500);">Greater Manchester</span>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;padding:1.5rem;background:var(--grey-100);border-radius:var(--radius);">
+            <h4 style="margin-bottom:0.5rem;">Existing customers</h4>
+            <p style="font-size:0.9rem;color:var(--grey-500);margin-bottom:0;">If you have an existing maintenance contract or need to report a fault, please call our service desk directly for the fastest response.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <span class="logo-text">Frost<span>line</span></span>
+        </a>
+        <p>Commercial HVAC installation, maintenance and repair across North West England. Keeping buildings comfortable since 2011.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#maintenance">Planned Maintenance</a></li>
+          <li><a href="services.html#reactive">Reactive Service</a></li>
+          <li><a href="services.html#installation">Installation &amp; Projects</a></li>
+          <li><a href="services.html#replacement">Replacement &amp; Upgrades</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sectors.html">Sectors</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><span style="color:rgba(255,255,255,0.5);font-size:0.85rem;">[Telephone]</span></li>
+          <li><span style="color:rgba(255,255,255,0.5);font-size:0.85rem;">[Email]</span></li>
+          <li><span style="color:rgba(255,255,255,0.5);font-size:0.85rem;">[Address]</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Frostline Mechanical Services Ltd. All rights reserved.</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div style="max-width:var(--max-width);margin:1rem auto 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);font-size:0.75rem;color:rgba(255,255,255,0.35);text-align:center;">
+      Frostline Mechanical Services is a fictional company. This website was generated from a canonical business-knowledge repository as a benchmark demonstration. No additional business facts were supplied during generation.
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.main-nav');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

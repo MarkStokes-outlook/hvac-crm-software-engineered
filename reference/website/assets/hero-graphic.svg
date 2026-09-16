@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <!-- Rooftop units -->
+  <rect x="80" y="220" width="120" height="80" rx="4" fill="#2a5a8c" opacity="0.3"/>
+  <rect x="90" y="230" width="100" height="60" rx="3" fill="#1a3a5c" opacity="0.5"/>
+  <rect x="100" y="240" width="30" height="20" rx="2" fill="#3a8fb7" opacity="0.6"/>
+  <rect x="140" y="240" width="30" height="20" rx="2" fill="#3a8fb7" opacity="0.6"/>
+  <!-- Fan symbol -->
+  <circle cx="155" cy="270" r="12" fill="none" stroke="#3a8fb7" stroke-width="1.5" opacity="0.8"/>
+  <path d="M155 258 C160 262, 160 266, 155 270 C150 266, 150 262, 155 258" fill="#3a8fb7" opacity="0.6"/>
+  <path d="M155 270 C160 274, 160 278, 155 282 C150 278, 150 274, 155 270" fill="#3a8fb7" opacity="0.6"/>
+  <!-- Building silhouette -->
+  <rect x="250" y="150" width="140" height="180" rx="3" fill="#1a3a5c" opacity="0.2"/>
+  <rect x="260" y="160" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="295" y="160" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="330" y="160" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="260" y="195" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="295" y="195" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="330" y="195" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="260" y="230" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="295" y="230" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <rect x="330" y="230" width="25" height="25" rx="2" fill="#3a8fb7" opacity="0.15"/>
+  <!-- Rooftop unit on building -->
+  <rect x="270" y="130" width="50" height="25" rx="3" fill="#2a5a8c" opacity="0.4"/>
+  <rect x="340" y="135" width="35" height="18" rx="2" fill="#2a5a8c" opacity="0.35"/>
+  <!-- Engineer figure -->
+  <circle cx="440" cy="255" r="10" fill="#e87c3e" opacity="0.7"/>
+  <rect x="433" y="267" width="14" height="30" rx="4" fill="#1a3a5c" opacity="0.5"/>
+  <rect x="430" y="270" width="20" height="3" rx="1" fill="#3a8fb7" opacity="0.4"/>
+  <!-- Clipboard -->
+  <rect x="455" y="270" width="12" height="16" rx="2" fill="#ffffff" opacity="0.6"/>
+  <line x1="458" y1="275" x2="464" y2="275" stroke="#1a3a5c" stroke-width="1" opacity="0.4"/>
+  <line x1="458" y1="279" x2="464" y2="279" stroke="#1a3a5c" stroke-width="1" opacity="0.4"/>
+  <!-- Ductwork suggestion -->
+  <rect x="400" y="180" width="80" height="12" rx="3" fill="#3a8fb7" opacity="0.2"/>
+  <rect x="470" y="180" width="12" height="60" rx="3" fill="#3a8fb7" opacity="0.2"/>
+  <!-- Temperature indicators -->
+  <circle cx="520" cy="200" r="20" fill="none" stroke="#3a8fb7" stroke-width="1.5" opacity="0.4"/>
+  <path d="M520 185 L520 200 L530 195" stroke="#e87c3e" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Snowflake accent -->
+  <path d="M100 100 L100 130 M85 115 L115 115 M88 103 L112 127 M88 127 L112 103" stroke="#3a8fb7" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  <!-- Ground line -->
+  <line x1="60" y1="330" x2="540" y2="330" stroke="#1a3a5c" stroke-width="1" opacity="0.2"/>
+</svg>
