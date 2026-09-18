@@ -216,6 +216,7 @@ export function auditLog(db: DB, opts: { entityType?: string; actorId?: number; 
     .all(...params, opts.limit ?? 100, opts.offset ?? 0) as {
     id: number;
     at: string;
+    actor_id: number | null;
     actor_name: string | null;
     actor_role: string | null;
     entity_type: string;
