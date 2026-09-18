@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { html, raw, type SafeHtml } from '../../lib/html.ts';
-import { clock, fmtD, fmtDT, fmtT, relative, toLocalInput } from '../../lib/clock.ts';
+import { clock, fmtD, fmtDT, fmtT, relative } from '../../lib/clock.ts';
 import { fmtMoney } from '../../lib/money.ts';
 import { NotFoundError } from '../../lib/errors.ts';
 import { can } from '../../auth/policy.ts';
@@ -19,7 +19,6 @@ import {
   checkbox,
   chip,
   commChip,
-  csrfInput,
   type Ctx,
   defList,
   drawer,
@@ -44,7 +43,7 @@ import {
   versionInput,
   when,
 } from '../ui.ts';
-import { actorOf, back, backInput, canReq, ctxOf, h, intParam, intQuery, needCap, ok, type RouteDeps, type RouteModule, send, strQuery } from '../kit.ts';
+import { actorOf, back, canReq, ctxOf, h, intParam, intQuery, needCap, ok, type RouteDeps, type RouteModule, send, strQuery } from '../kit.ts';
 import { aiButtons, aiPanel, loadInteraction } from '../aipanel.ts';
 
 const register: RouteModule = (app, deps) => {

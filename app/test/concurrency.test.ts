@@ -5,7 +5,6 @@ import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { after, before, describe, it } from 'node:test';
 import * as Inv from '../src/domain/inventory.ts';
-import * as J from '../src/domain/jobs.ts';
 import { count, makeEnv, one, type TestEnv } from './helpers.ts';
 
 const run = promisify(execFile);
@@ -21,7 +20,7 @@ after(() => env.close());
 
 /** Runs n separate processes at once, each trying to take `qty` of the item. */
 async function race(mode: 'reserve' | 'transfer', opts: { n: number; itemId: number; locationId: number; qty: number; jobId?: number; toLocation?: number }) {
-  const attempts = Array.from({ length: opts.n }, (_, i) =>
+  const attempts = Array.from({ length: opts.n }, () =>
     run(tsx, [worker, env.file, mode, String(opts.itemId), String(opts.locationId), String(opts.qty), String(env.actors.mick.id), String(opts.jobId ?? '')], {
       env: { ...process.env, RACE_TO_LOCATION: String(opts.toLocation ?? '') },
     })
@@ -100,7 +99,7 @@ describe('contested stock across processes (AC-060-02, AC-061-02)', () => {
   });
 
   it('does not double-issue a part when the same submission is retried', async () => {
-    const { db, actors } = env;
+    const { db } = env;
     const item = one<{ id: number }>(db, `SELECT id FROM stock_items WHERE sku = 'FUSE-10A'`).id;
 
     const live = one<{ id: number; engineer_user_id: number; username: string; role: string; display_name: string }>(

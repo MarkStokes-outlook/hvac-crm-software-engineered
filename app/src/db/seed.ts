@@ -1,7 +1,7 @@
 import type { DB } from './db.ts';
 import { hashPassword } from '../auth/auth.ts';
 import type { Actor, Role } from '../auth/policy.ts';
-import { clock, MIN, HOUR, DAY, toLocalInput } from '../lib/clock.ts';
+import { clock, MIN, DAY, toLocalInput } from '../lib/clock.ts';
 import { nextRef } from '../lib/refs.ts';
 import * as jobs from '../domain/jobs.ts';
 import * as sched from '../domain/scheduling.ts';

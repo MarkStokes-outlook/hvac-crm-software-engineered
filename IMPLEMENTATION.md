@@ -53,7 +53,7 @@ modified.
 ## Verification performed
 
 - `npm run typecheck` — clean.
-- `npm test` — 42 tests, all passing, about three seconds.
+- `npm test` — 43 tests, all passing, about four seconds.
 - `npm run setup` from a clean checkout, then restart, confirming records persist.
 - Pages rendered in headless Chromium at 390×844 (phone) and 1440×900 (desktop) for the engineer and
   office journeys: no horizontal overflow, primary field actions are large touch targets.

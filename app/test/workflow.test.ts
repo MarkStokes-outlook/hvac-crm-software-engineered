@@ -3,7 +3,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { after, before, describe, it } from 'node:test';
 import { migrate, openDb } from '../src/db/db.ts';
-import { clock } from '../src/lib/clock.ts';
 import * as J from '../src/domain/jobs.ts';
 import { Client, count, localIn, makeEnv, one, startServer, type TestEnv, type TestServer } from './helpers.ts';
 

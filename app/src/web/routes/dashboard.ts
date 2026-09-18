@@ -3,8 +3,8 @@ import { fmtDT, fmtT, relative } from '../../lib/clock.ts';
 import { dashboard, type Queue, type SlaRiskRow, type StockException } from '../../domain/dashboard.ts';
 import { search } from '../../domain/search.ts';
 import { markRead, notificationsFor } from '../../domain/admin.ts';
-import { card, chip, defList, empty, form, labelise, opChip, page, priorityChip, table, when } from '../ui.ts';
-import { actorOf, ctxOf, h, intQuery, ok, type RouteModule, send, strQuery } from '../kit.ts';
+import { card, chip, empty, form, labelise, opChip, page, priorityChip, table, when } from '../ui.ts';
+import { actorOf, ctxOf, h, ok, type RouteModule, send, strQuery } from '../kit.ts';
 
 const register: RouteModule = (app, { db }) => {
   // Engineers land on their own day; everyone else gets the operations dashboard.

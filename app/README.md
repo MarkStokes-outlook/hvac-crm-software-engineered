@@ -142,12 +142,14 @@ computed from the records rather than by a model.
 
 ## Testing
 
-`npm test` runs 42 tests in about three seconds:
+`npm test` runs 43 tests in about four seconds:
 
 - **`test/domain.test.ts`** — the invariants above, exercised directly against the domain services.
 - **`test/workflow.test.ts`** — HTTP journeys: sign-in and role boundaries, CSRF, redaction of
   sensitive site notes, a job from phone call to submitted attendance to office decision, evidence
   upload and retrieval, durability across a restart, the AI boundary, and the CSV seam.
+- **`test/routes.test.ts`** — every state-changing route driven with the field names its form
+  actually submits, asserting on the message the application gives back.
 - **`test/concurrency.test.ts`** — eight separate OS processes racing for five parts: exactly five
   succeed, three are cleanly refused, nothing goes negative, and a retried issue moves stock once.
 

@@ -10,17 +10,14 @@ import {
   card,
   checkbox,
   chip,
-  type Ctx,
   defList,
   drawer,
   dtInput,
-  empty,
   enumOptions,
   form,
   input,
   labelise,
   opChip,
-  options,
   page,
   priorityChip,
   prose,
@@ -29,7 +26,6 @@ import {
   table,
   textarea,
   versionInput,
-  when,
 } from '../ui.ts';
 import { actorOf, back, canReq, ctxOf, h, intParam, intQuery, needCap, ok, type RouteModule, send, strQuery } from '../kit.ts';
 

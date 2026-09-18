@@ -32,7 +32,7 @@ import {
   textarea,
   when,
 } from '../ui.ts';
-import { actorOf, back, ctxOf, h, intParam, ok, type RouteModule, send, strQuery } from '../kit.ts';
+import { actorOf, ctxOf, h, intParam, ok, type RouteModule, send, strQuery } from '../kit.ts';
 import { aiButtons, aiPanel, loadInteraction } from '../aipanel.ts';
 
 const register: RouteModule = (app, deps) => {

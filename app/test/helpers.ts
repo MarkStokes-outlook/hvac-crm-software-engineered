@@ -161,7 +161,6 @@ export function count(db: DB, sql: string, ...params: unknown[]): number {
 /** Local datetime-local string for a moment relative to now, for form inputs. */
 export function localIn(minutes: number): string {
   const d = new Date(clock.now().getTime() + minutes * 60_000);
-  const pad = (n: number) => String(n).padStart(2, '0');
   // Tests run in Europe/London on the CI box; use the same conversion the app does.
   const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(d);
   const get = (t: string) => parts.find((p) => p.type === t)!.value;

@@ -1,7 +1,6 @@
 import { html, raw, type SafeHtml } from '../../lib/html.ts';
-import { clock, fmtD, fmtDT, relative } from '../../lib/clock.ts';
-import { fmtMoney, penceToInput } from '../../lib/money.ts';
-import { DomainError } from '../../lib/errors.ts';
+import { clock, fmtD, fmtDT } from '../../lib/clock.ts';
+import { fmtMoney } from '../../lib/money.ts';
 import { APPROVAL_ACTIONS } from '../../auth/policy.ts';
 import * as Q from '../../domain/quotes.ts';
 import * as CRM from '../../domain/crm.ts';
@@ -15,7 +14,6 @@ import {
   type Ctx,
   defList,
   drawer,
-  empty,
   enumOptions,
   form,
   input,
@@ -152,8 +150,6 @@ const register: RouteModule = (app, { db }) => {
       const opp = Q.getOpportunity(db, id);
       const revisions = Q.revisionsFor(db, id);
       const staff = J.staffOptions(db);
-      const sites = CRM.sitesForCustomer(db, opp.customer_id);
-      const variations = Q.variationsFor(db, { acceptanceId: undefined, jobId: undefined, projectId: undefined });
       const selectedRevId = intQuery(req, 'rev') ?? revisions[0]?.id;
       const rev = selectedRevId ? Q.getRevision(db, selectedRevId) : undefined;
       const lines = rev ? Q.linesFor(db, rev.id) : [];
@@ -385,7 +381,6 @@ const register: RouteModule = (app, { db }) => {
           `,
         }),
       );
-      void variations;
     }),
   );
 

@@ -1,5 +1,5 @@
-import { html, raw, type SafeHtml } from '../../lib/html.ts';
-import { clock, fmtD, fmtDT, relative } from '../../lib/clock.ts';
+import { html, raw } from '../../lib/html.ts';
+import { clock, fmtD, fmtDT } from '../../lib/clock.ts';
 import * as Inv from '../../domain/inventory.ts';
 import * as J from '../../domain/jobs.ts';
 import { stockExceptions } from '../../domain/dashboard.ts';
@@ -9,11 +9,9 @@ import {
   card,
   checkbox,
   chip,
-  type Ctx,
   defList,
   drawer,
   dtInput,
-  empty,
   enumOptions,
   form,
   idemInput,
