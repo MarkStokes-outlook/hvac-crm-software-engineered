@@ -81,6 +81,7 @@ code, .mono { font-family: var(--mono); font-size: 0.85em; }
 @media (min-width: 1100px) { .brand-sub { display: inline; } }
 
 .topsearch { flex: 1 1 auto; max-width: 420px; display: flex; }
+.searchlink { display: none; color: #fff; padding: 4px; }
 .topsearch input {
   width: 100%;
   border: 1px solid rgba(255,255,255,0.28);
@@ -151,8 +152,10 @@ main.narrow { max-width: 820px; }
 .definition { font-size: 0.78rem; color: var(--ink-3); padding: 8px 12px; border-top: 1px dashed var(--line); background: var(--surface-2); }
 
 .grid { display: grid; gap: 14px; }
-.grid.cols2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
-.grid.cols3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+/* Grid children must be allowed to shrink, or a wide table inside one pushes the page sideways. */
+.grid > * { min-width: 0; }
+.grid.cols2 { grid-template-columns: repeat(auto-fit, minmax(min(430px, 100%), 1fr)); }
+.grid.cols3 { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); }
 .grid.split { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
 @media (max-width: 1000px) { .grid.split { grid-template-columns: 1fr; } }
 
@@ -234,7 +237,7 @@ dl.def.stack dd { margin-bottom: 8px; }
 .btn.accent:hover { background: #2f7da2; }
 .btn.danger { background: var(--surface); border-color: #e3aeab; color: var(--danger); }
 .btn.danger:hover { background: var(--danger-bg); }
-.btn.small { font-size: 0.75rem; padding: 3px 8px; min-height: 28px; }
+.btn.small { font-size: 0.75rem; padding: 4px 9px; min-height: 32px; }
 .btn.block { width: 100%; }
 .btn:disabled, .btn[aria-disabled='true'] { opacity: 0.5; cursor: not-allowed; }
 .btnrow { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
@@ -243,8 +246,8 @@ dl.def.stack dd { margin-bottom: 8px; }
 /* ---------------------------------------------------------------- forms */
 form.stack { display: grid; gap: 12px; }
 .fields { display: grid; gap: 12px; }
-.fields.cols2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.fields.cols3 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.fields.cols2 { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.fields.cols3 { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
 .field { display: grid; gap: 4px; min-width: 0; }
 .field > label, .field > .lbl { font-size: 0.78rem; font-weight: 600; color: var(--ink-2); }
 .field .hint { font-size: 0.75rem; color: var(--ink-3); }
@@ -378,6 +381,15 @@ footer.appfoot { padding: 14px 16px; font-size: 0.75rem; color: var(--ink-3); te
 
 @media (max-width: 700px) {
   main { padding: 10px; }
+  /* On a phone the search field would crowd the bar; a search page is one tap away instead. */
+  .topsearch { display: none; }
+  .searchlink { display: inline-flex; align-items: center; }
+  .btn.small { min-height: 38px; padding: 6px 11px; font-size: 0.8125rem; }
+  .check { padding: 6px 0; }
+  .check input[type='checkbox'], .check input[type='radio'] { width: 22px; height: 22px; }
+  details.drawer > summary { min-height: 44px; }
+  .topbar { min-height: 56px; }
+  nav.mainnav { top: 56px; }
   .pagehead { gap: 8px; }
   table.data th, table.data td { padding: 6px 8px; }
   dl.def { grid-template-columns: 1fr; gap: 1px; }

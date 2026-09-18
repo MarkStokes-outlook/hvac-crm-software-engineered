@@ -342,13 +342,11 @@ export function seed(db: DB, opts: { now?: Date } = {}) {
       ['P1', 30, 240, 1440],
       ['P2', 60, 480, 2880],
       ['P3', 240, 1440, 7200],
-      ['P4', null, 10080, null],
     ]);
     contract('pc', 'pennine', 'Pennine Care — heating & ventilation service', ['oakwood', 'ribble', 'hollins'], 'Annual boiler service, 6-monthly ventilation service. Reactive attendance 24/7 for heating/hot water loss. Minor repairs under £250 parts covered.', 1, 'Clock stops permitted for no access or customer delay, with written evidence.', [
       ['P1', 15, 240, 1440],
       ['P2', 60, 480, 2880],
       ['P3', 240, 1440, 4320],
-      ['P4', null, 10080, null],
     ]);
     contract('mf', 'mersey', 'Mersey Fresh — refrigeration service', ['speke'], 'Quarterly refrigeration PPM. 24/7 reactive. Parts chargeable.', 1, 'Clock stops for parts on manufacturer back-order and for customer access delay.', [
       ['P1', 15, 240, 720],
@@ -431,9 +429,10 @@ export function seed(db: DB, opts: { now?: Date } = {}) {
       minutes?: number;
       next?: [string, string, number];
       by?: Actor;
+      responseNote?: string;
     }
-    const newJob = (j: NewJob): number =>
-      jobs.createJob(db, j.by ?? coord, {
+    const newJob = (j: NewJob): number => {
+      const id = jobs.createJob(db, j.by ?? coord, {
         site_id: String(S[j.site]),
         kind: j.kind ?? 'reactive',
         title: j.title,
@@ -459,6 +458,13 @@ export function seed(db: DB, opts: { now?: Date } = {}) {
         review_at: j.next ? local(minutesFromClock(j.next[2])) : '',
         acknowledged: 'on',
       });
+      // Coordinators call the customer back; recording it keeps the SLA picture honest rather
+      // than showing every job as an unanswered breach.
+      if ((j.kind ?? 'reactive') !== 'planned') {
+        sla.recordManualEvent(db, j.by ?? coord, id, { type: 'response', note: j.responseNote ?? 'Coordinator spoke to the customer, confirmed the symptom and explained the next step' });
+      }
+      return id;
+    };
     function minutesFromClock(addMin: number) {
       return (clock.now().getTime() - NOW.getTime()) / MIN + addMin;
     }
@@ -935,6 +941,18 @@ export function seed(db: DB, opts: { now?: Date } = {}) {
         next_action: 'Chase Joanne Kerr (procurement) for decision',
         next_owner_user_id: String(est.id),
         review_at: local(60 * 24 * 2),
+      }),
+    );
+
+    at(-60 * 24 * 46, () =>
+      sla.startClockStop(db, coord, L5, {
+        reason_category: 'customer_delay',
+        contractual_basis: 'Contract permits clock stops for customer-requested delay, evidenced in writing',
+        dependency_detail: 'Northgate procurement deciding on the quoted indoor unit replacement',
+        evidence: 'Email from J. Kerr confirming the decision is with their client',
+        expected_actor: 'Joanne Kerr (Northgate procurement)',
+        owner_user_id: String(est.id),
+        chase_at: local(-60 * 24 * 44),
       }),
     );
 

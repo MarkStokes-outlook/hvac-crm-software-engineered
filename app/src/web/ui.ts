@@ -80,6 +80,9 @@ export function page(ctx: Ctx, o: PageOpts): string {
     <form class="topsearch" role="search" action="/search" method="get">
       <input type="search" name="q" placeholder="Search customers, sites, equipment, jobs, quotes…" aria-label="Search records" autocomplete="off">
     </form>
+    <a class="searchlink" href="/search" aria-label="Search records">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </a>
     <div class="topright">
       <a class="bell" href="/notifications" aria-label="Notifications${ctx.unread ? ` (${ctx.unread} unread)` : ''}">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
