@@ -29,7 +29,7 @@ npm start          # http://localhost:3000
 | `npm run db:seed` | Load the demo dataset into an empty database |
 | `npm start` | Run the application on `PORT` (default 3000) |
 | `npm run dev` | Same, restarting on file changes |
-| `npm test` | Run the full test suite (~3 seconds) |
+| `npm test` | Run the full test suite (43 tests, ~4 seconds) |
 | `npm run typecheck` | Type-check without emitting |
 
 `GET /healthz` returns a JSON health check.
