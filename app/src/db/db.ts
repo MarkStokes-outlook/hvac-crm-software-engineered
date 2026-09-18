@@ -43,3 +43,13 @@ export function migrate(db: DB): string[] {
 export function tx<T>(db: DB, fn: () => T): T {
   return db.transaction(fn).immediate();
 }
+
+/** Opens a read-only companion connection (used for AI context retrieval). */
+export function openDbReadOnly(file: string): DB | undefined {
+  try {
+    return openDb(file, { readonly: true });
+  } catch (err) {
+    console.error(JSON.stringify({ level: 'warn', msg: 'read-only connection unavailable; AI context falls back to the main connection', error: (err as Error).message }));
+    return undefined;
+  }
+}
