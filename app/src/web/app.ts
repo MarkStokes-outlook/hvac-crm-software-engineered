@@ -1,6 +1,7 @@
 import crypto from 'node:crypto';
 import path from 'node:path';
 import express, { type NextFunction, type Request, type Response } from 'express';
+import multer from 'multer';
 import type { DB } from '../db/db.ts';
 import { config } from '../config.ts';
 import { type Role, ROLE_LABEL } from '../auth/policy.ts';
@@ -54,6 +55,19 @@ export function createApp(deps: AppDeps) {
 
   app.use('/static', express.static(path.join(config.root, 'public'), { maxAge: config.isProd ? '1h' : 0, index: false, redirect: false }));
   app.use(express.urlencoded({ extended: true, limit: '1mb' }));
+
+  // Multipart bodies (evidence photos, CSV imports) must be parsed before the CSRF check,
+  // otherwise the token in the form is invisible to it and every upload is rejected.
+  const uploads = multer({ storage: multer.memoryStorage(), limits: { fileSize: 12 * 1024 * 1024, files: 1, fields: 80 } });
+  app.use((req, res, next) => {
+    if (!req.is('multipart/form-data')) return next();
+    uploads.any()(req, res, (err?: unknown) => {
+      if (err) return next(err);
+      const files = (req.files as Express.Multer.File[] | undefined) ?? [];
+      req.file = files.find((f) => f.fieldname === 'file');
+      next();
+    });
+  });
 
   app.get('/healthz', (_req, res) => {
     const row = db.prepare('SELECT COUNT(*) n FROM users').get() as { n: number };
@@ -142,6 +156,9 @@ export function createApp(deps: AppDeps) {
   });
 
   app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
+    if (err instanceof multer.MulterError) {
+      err = new DomainError(err.code === 'LIMIT_FILE_SIZE' ? 'That file is too large — photos must be under 12 MB.' : `Upload rejected (${err.code}).`);
+    }
     const de = err as DomainError;
     const isDomain = err instanceof DomainError;
     const status = isDomain && typeof de.status === 'number' ? de.status : 500;

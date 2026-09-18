@@ -461,9 +461,11 @@ export function updateReadiness(db: DB, actor: Actor, id: number, body: Record<s
   const flags = Object.fromEntries(READINESS_KEYS.map((k) => [k, f.bool(k) ? 1 : 0])) as Record<(typeof READINESS_KEYS)[number], number>;
   const emergency = f.bool('emergency_proceed') ? 1 : 0;
   const emergencyReason = f.opt('emergency_reason', 1000);
-  const requiredComp = f.opt('required_competences', 500);
-  const estimated = f.int('estimated_minutes', 'Estimated duration', { min: 15, max: 7 * 24 * 60 });
-  const resources = f.opt('expected_resources');
+  // Planning fields are only replaced when the form actually carried them, so a readiness
+  // update from a partial form cannot silently erase the competence or resource requirements.
+  const requiredComp = f.has('required_competences') ? f.opt('required_competences', 500) : undefined;
+  const estimated = f.has('estimated_minutes') ? f.int('estimated_minutes', 'Estimated duration', { min: 15, max: 7 * 24 * 60 }) : undefined;
+  const resources = f.has('expected_resources') ? f.opt('expected_resources') : undefined;
   const version = f.int('version', 'Version');
   if (emergency) f.check(emergencyReason, 'emergency_reason', 'Record why the work proceeds despite unmet readiness.');
   f.done();
@@ -486,9 +488,9 @@ export function updateReadiness(db: DB, actor: Actor, id: number, body: Record<s
       ...flags,
       emergency_proceed: emergency,
       emergency_reason: emergency ? emergencyReason : null,
-      required_competences: requiredComp,
-      estimated_minutes: estimated,
-      expected_resources: resources,
+      ...(requiredComp === undefined ? {} : { required_competences: requiredComp }),
+      ...(estimated === undefined ? {} : { estimated_minutes: estimated }),
+      ...(resources === undefined ? {} : { expected_resources: resources }),
       op_status: status,
     });
     audit(db, actor, 'job', id, emergency && !j.emergency_proceed ? 'emergency_proceed' : 'readiness_updated', {

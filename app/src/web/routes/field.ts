@@ -1,4 +1,3 @@
-import multer from 'multer';
 import { html, raw, type SafeHtml } from '../../lib/html.ts';
 import { addDays, clock, DAY, fmtD, fmtDT, fmtT, londonDate, londonDayStart, relative } from '../../lib/clock.ts';
 import { ForbiddenError } from '../../lib/errors.ts';
@@ -35,8 +34,6 @@ import {
 } from '../ui.ts';
 import { actorOf, back, ctxOf, h, intParam, ok, type RouteModule, send, strQuery } from '../kit.ts';
 import { aiButtons, aiPanel, loadInteraction } from '../aipanel.ts';
-
-const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 12 * 1024 * 1024, files: 1 } });
 
 const register: RouteModule = (app, deps) => {
   const { db } = deps;
@@ -176,7 +173,6 @@ const register: RouteModule = (app, deps) => {
 
   app.post(
     '/attendances/:id/evidence',
-    upload.single('file'),
     h((req, res) => {
       const id = intParam(req);
       A.addEvidence(db, actorOf(req), deps.uploadDir, id, req.body, req.file ?? undefined);

@@ -1,4 +1,3 @@
-import multer from 'multer';
 import { html, raw } from '../../lib/html.ts';
 import { fmtD, fmtDT } from '../../lib/clock.ts';
 import { fmtMoney } from '../../lib/money.ts';
@@ -9,8 +8,6 @@ import { PRIORITY_LABEL } from '../../domain/jobs.ts';
 import { banner, card, chip, defList, empty, form, labelise, page, pagination, select, table } from '../ui.ts';
 import { actorOf, canReq, ctxOf, h, intQuery, needCap, ok, type RouteModule, send, strQuery } from '../kit.ts';
 import { auditTable } from './jobs.ts';
-
-const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 4 * 1024 * 1024, files: 1 } });
 
 const register: RouteModule = (app, { db }) => {
   app.get(
@@ -210,7 +207,6 @@ const register: RouteModule = (app, { db }) => {
 
   app.post(
     '/data/import',
-    upload.single('file'),
     h((req, res) => {
       const ctx = ctxOf(req);
       const kind = String(req.body?.kind ?? '') as ImportKey;
