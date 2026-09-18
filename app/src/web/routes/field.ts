@@ -587,10 +587,10 @@ function submitPage(deps: Parameters<RouteModule>[1], ctx: Ctx, a: Sched.Attenda
               </div>
             </div>`,
           })}
-          <div data-show-when="outcome:${raw(tempCodes.join('|'))}" hidden>
+          <div data-show-when="outcome:${raw(tempCodes.join('|'))}">
             ${card({
               title: 'Temporary restoration',
-              body: html`<p class="tiny subtle">A temporary repair is a future obligation, not “fixed”. All of this is required.</p>
+              body: html`<p class="tiny subtle">Only for a temporary restoration outcome. A temporary repair is a future obligation, not “fixed”, so all of this is required.</p>
                 <div class="fields">
                   ${textarea({ name: 'temp_change_made', label: 'What you changed', rows: 2 })}
                   ${textarea({ name: 'temp_reason', label: 'Why it is temporary', rows: 2 })}
@@ -605,10 +605,11 @@ function submitPage(deps: Parameters<RouteModule>[1], ctx: Ctx, a: Sched.Attenda
                 </div>`,
             })}
           </div>
-          <div data-show-when="outcome:${raw(followonCodes.join('|'))}" hidden>
+          <div data-show-when="outcome:${raw(followonCodes.join('|'))}">
             ${card({
               title: 'Handoff — what the next person needs',
-              body: html`<div class="fields">
+              body: html`<p class="tiny subtle">Required whenever the visit did not finish the job: partial work, diagnosis only, made safe, no access, missing parts, specialist needed or a temporary repair.</p>
+                <div class="fields">
                 ${input({ name: 'handoff_required_outcome', label: 'Required outcome to finish the job' })}
                 ${select({ name: 'handoff_dependency', label: 'Exact dependency', options: enumOptions(J.WAITING_CATEGORIES, J.WAITING_LABEL) })}
                 ${textarea({ name: 'handoff_dependency_detail', label: 'Detail of that dependency', rows: 2 })}
